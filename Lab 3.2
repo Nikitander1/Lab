@@ -1,1 +1,26 @@
-
+#include <stdio.h> 
+#include <conio.h> 
+ 
+const int S = 5;
+int main()
+{
+ int i, r, NewS; 
+ int mass[S], NewMass[S]; 
+ 
+ printf(" Vvedite massiv iz 10 elementov: \n");
+  for (i=0; i<S; i++) 
+   { printf(" Vvedite element[%d]: ", i);
+     scanf("%d", &mass[i]); }
+   
+  NewS=0; 
+   for (i=0; i<S; i++) 
+    if (mass[i]>=0)
+     { NewMass[NewS++]=mass[i]; }
+                         
+   printf("\n Noviy massive s chislami >= 0: \n");
+   for (i=0; i<NewS; i++)
+      { printf("\n Mass[%d] = %d. ", i, NewMass[i]); } 
+ 
+ getch(); 
+ return 0; 
+}
